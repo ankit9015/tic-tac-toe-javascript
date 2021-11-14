@@ -1,0 +1,122 @@
+
+:root {
+    
+}
+
+header {
+    font-size: xx-large;
+    font-weight: bold;
+    color:crimson;
+    text-align: center;
+    margin: 2em;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url(./images/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#game-wrapper {
+    height: 60vmin;
+    width: 60vmin;
+    margin: auto;
+    
+}
+
+
+#gameboard {
+    margin: auto;
+    display: grid;
+    opacity: 40%;
+    background: rgb(102, 157, 233);
+    width: 50vmin;
+    height: 50vmin;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gameboard-element:hover {
+    background-color: yellow;
+}
+
+.gameboard-element {
+    text-align: center;
+    font-size: xx-large;
+    padding: 2.5ex;
+    background-color: red;
+    margin: 5px;
+}
+
+.wrapper-popup {
+    position: fixed;
+    left: 20%;
+    width: 60vw;
+    height: 60vh;
+    margin: auto;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    z-index: 2;
+}
+
+#player-data {
+    /* position: relative;
+    top: 20%;
+    left: 20%; */
+    margin: 2rem;
+    width: 70%;
+    height: 70%;
+    padding: auto 10%;
+    background-color: blue;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.player {
+    display: flex;
+    padding: 1rem;
+    background-color: crimson;
+    flex-flow: column wrap;
+    gap: 10px;
+    align-items: center;
+    font-size: large;
+}
+
+#start-game {
+    padding: 1rem 2rem;
+    font-size: large;
+    font-weight: bold;
+    margin: 2rem;
+}
+
+#result-popup {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 60vw;
+    height: 60vh;
+    margin: auto;
+    background-color: green;
+    flex-direction: column;
+    align-items: center;   
+}
+
+#result-popup #message {
+    font-size: 2rem;
+    color: crimson;
+    font-weight: bold;
+    width: 70%;
+    height: 40%;
+    text-align: center;
+    padding: 2.5ex;
+}
