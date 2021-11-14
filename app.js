@@ -146,15 +146,14 @@ var game = (function() {
                     return;
                 }
             }
-            console.log(`win ${getCurrentPlayer().getName()}`);
             
-            displayController.showResult(`win ${getCurrentPlayer().getName()}`);
+            displayController.showResult(`Congratullations ${getCurrentPlayer().getName()} Won!!`);
             flag = true
             return;
         })
         if (!Gameboard.includes("") && flag===false) {
             console.log("Draw");
-            displayController.showResult('Draw');
+            displayController.showResult('Match is Draw');
             return;
         }
     }

@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 
 :root {
-    
+    --primary-font: #c9184a;
+    --vibrant-pink: #f72585;
+    --middle-blue: #7209b7;
+    --vibrant-blue: #4895ef;
+    --dark-blue: #3a0ca3;
 }
 
-header {
-    font-size: xx-large;
-    font-weight: bold;
-    color:crimson;
-    text-align: center;
-    margin: 2em;
-}
+
+
 
 body {
     margin: 0px;
@@ -18,6 +19,15 @@ body {
     background-image: url(./images/background-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Kaushan Script', cursive;
+}
+
+header {
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--primary-font);
+    text-align: center;
+    margin: 2em;
 }
 
 #game-wrapper {
@@ -31,8 +41,8 @@ body {
 #gameboard {
     margin: auto;
     display: grid;
-    opacity: 40%;
-    background: rgb(102, 157, 233);
+    /* opacity: 60%; */
+    background: var(--vibrant-pink);
     width: 50vmin;
     height: 50vmin;
     grid-template-rows: repeat(3, 1fr);
@@ -47,8 +57,10 @@ body {
     text-align: center;
     font-size: xx-large;
     padding: 2.5ex;
-    background-color: red;
+    background-color: var(--vibrant-blue);
     margin: 5px;
+    color: var(--vibrant-pink);
+    opacity: 100%;
 }
 
 .wrapper-popup {
@@ -57,7 +69,7 @@ body {
     width: 60vw;
     height: 60vh;
     margin: auto;
-    background-color: green;
+    background-color: var(--vibrant-blue);
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -65,36 +77,44 @@ body {
 }
 
 #player-data {
-    /* position: relative;
-    top: 20%;
-    left: 20%; */
     margin: 2rem;
     width: 70%;
     height: 70%;
     padding: auto 10%;
-    background-color: blue;
+    background-color: var(--dark-blue);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    border: var(--vibrant-pink) 5px solid;
 }
 
 .player {
     display: flex;
     padding: 1rem;
-    background-color: crimson;
+    background-color: var(--vibrant-blue);
     flex-flow: column wrap;
     gap: 10px;
     align-items: center;
     font-size: large;
+    color: var(--primary-font);
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-#start-game {
+input {
+    text-align: center;
+}
+
+button {
     padding: 1rem 2rem;
     font-size: large;
     font-weight: bold;
     margin: 2rem;
+    background-color: var(--dark-blue);
+    color: var(--vibrant-pink);
+    border: var(--vibrant-pink) 2px solid;
 }
 
 #result-popup {
@@ -106,17 +126,24 @@ body {
     width: 60vw;
     height: 60vh;
     margin: auto;
-    background-color: green;
+    /* background-color: green; */
     flex-direction: column;
     align-items: center;   
 }
 
 #result-popup #message {
     font-size: 2rem;
-    color: crimson;
+    color: var(--primary-font);
     font-weight: bold;
     width: 70%;
     height: 40%;
     text-align: center;
     padding: 2.5ex;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-font);
 }
